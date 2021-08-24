@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="discount"></h2>
+    <script>
+        // cara satu
+       /*  let x = "75.272,4000";
+        let y = "2.750";
+        let result = document.getElementById('result');
+        let hasil = document.getElementById('hasil');
+        hasil.innerHTML = parseInt(y)+" tipe datanya adalah: "+typeof(parseInt(y));
+        result.innerText = parseFloat(x).toFixed(2) + " Adalah tipe: " + typeof(parseFloat(x)); */
+
+        // cara dua
+        const formatRupiah = () => {
+
+            let hargaAwal = prompt('masukan harga barang: ');
+            let i = prompt('masukan harga diskon: ');
+            let diskon = i * hargaAwal / 100;
+            let hasil = hargaAwal - diskon;
+
+            return new Intl.NumberFormat('id-ID', {style: 'currency', currency: 'IDR', minimumFractionDigits: 2}).format(hasil);
+        }
+
+        let jmlh = document.getElementById('discount');
+
+        jmlh.innerHTML = formatRupiah(hasil);
+    </script>
+</body>
+</html>
