@@ -9,7 +9,6 @@
 <body>
     <!-- <div id="result"></div>
     <div id="hasil"></div> -->
-    <h2>coba</h2>
     
     <h2 id="discount"></h2>
     <script>
@@ -28,7 +27,12 @@
         let hasil = hargaAwal - diskon;
 
         const formatRupiah = (hasil) => {
-            return new Intl.NumberFormat('id-ID', {style: 'currency', currency: 'IDR', minimumFractionDigits: 2}).format(hasil);
+            return new Intl.NumberFormat(
+                'id-ID',
+                {style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 2}
+            ).format(hasil);
         }
 
         let jmlh = document.getElementById('discount');
