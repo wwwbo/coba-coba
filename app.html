@@ -9,6 +9,7 @@
 <body>
     <!-- <div id="result"></div>
     <div id="hasil"></div> -->
+    <h2>coba</h2>
     
     <h2 id="discount"></h2>
     <script>
@@ -21,13 +22,12 @@
         result.innerText = parseFloat(x).toFixed(2) + " Adalah tipe: " + typeof(parseFloat(x)); */
 
         // cara dua
-        const formatRupiah = () => {
+        let hargaAwal = prompt('masukan harga barang: ');
+        let i = prompt('masukan harga diskon: ');
+        let diskon = i * hargaAwal / 100;
+        let hasil = hargaAwal - diskon;
 
-            let hargaAwal = prompt('masukan harga barang: ');
-            let i = prompt('masukan harga diskon: ');
-            let diskon = i * hargaAwal / 100;
-            let hasil = hargaAwal - diskon;
-
+        const formatRupiah = (hasil) => {
             return new Intl.NumberFormat('id-ID', {style: 'currency', currency: 'IDR', minimumFractionDigits: 2}).format(hasil);
         }
 
